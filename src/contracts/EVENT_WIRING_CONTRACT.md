@@ -27,3 +27,9 @@ Rules:
 
 Purpose:
 Guarantee human-terminated, deterministic execution.
+
+Input Rules:
+- Input is captured once per run
+- Snapshot is immutable
+- Downstream systems consume snapshot only
+- No live reads from DOM after capture

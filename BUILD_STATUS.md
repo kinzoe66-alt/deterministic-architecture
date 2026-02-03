@@ -16,3 +16,7 @@ Checkpoint 9 Complete:
 Checkpoint 10 Complete:
 - Event wiring contract defined
 - Execution surface locked to explicit triggers
+
+Checkpoint 11 Complete:
+- Input snapshot module created
+- Mutation path eliminated
