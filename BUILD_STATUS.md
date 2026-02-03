@@ -24,3 +24,7 @@ Checkpoint 11 Complete:
 Checkpoint 12 Complete:
 - Diagnostic cycle object introduced
 - Run-level isolation enforced
+
+Checkpoint 13 Complete:
+- Stage registry added
+- Diagnostic trace enabled per run
