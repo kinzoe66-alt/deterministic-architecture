@@ -28,3 +28,22 @@ Checkpoint 12 Complete:
 Checkpoint 13 Complete:
 - Stage registry added
 - Diagnostic trace enabled per run
+
+Checkpoint 14 Complete:
+- Diagnostic cycle introduced
+- Doctrine registers outputs (read-only)
+
+Checkpoint 15 Complete:
+- Purpose prediction registered
+- Prediction isolated from doctrine + psom
+- Delta-ready architecture
+
+Checkpoint 16 Complete:
+- Prediction vs outcome delta exposed
+- Explanation-only layer added
+- No authority leakage
+
+Checkpoint 17 Complete:
+- Internal Diagnostic Ledger active
+- One entry per run-cycle
+- Append-only, non-executable

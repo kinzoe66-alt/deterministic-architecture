@@ -1,26 +1,19 @@
 /*
 DIAGNOSTIC CYCLE
-- One run = one object
-- Immutable record
-- No execution authority
+- One per run
+- Owns stage trace only
 */
 
-export function createDiagnosticCycle({ inputSnapshot }) {
-  const cycle = {
+export function createDiagnosticCycle() {
+  return {
     id: crypto.randomUUID(),
+    status: "ACTIVE",
     startedAt: new Date().toISOString(),
-    input: inputSnapshot,
-    stages: [],
-    status: "ACTIVE"
+    stages: []
   };
-
-  return Object.freeze(cycle);
 }
 
-export function closeDiagnosticCycle(cycle) {
-  return Object.freeze({
-    ...cycle,
-    endedAt: new Date().toISOString(),
-    status: "CLOSED"
-  });
+export function closeCycle(cycle) {
+  cycle.status = "CLOSED";
+  cycle.closedAt = new Date().toISOString();
 }
