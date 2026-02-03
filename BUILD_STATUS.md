@@ -1,8 +1,6 @@
+Checkpoint 5 Complete:
+- Signal normalization layer declared
+- Raw detection separated from normalized meaning
+- No UI or execution changes
 
-## Checkpoint 2 — Internal Wiring Skeleton
-- SDOM placeholder wired
-- IDL placeholder wired
-- Artifact registry introduced
-- No runtime imports
-- No UI changes
-- No behavior changes
+System state: STABLE / NORMALIZED
