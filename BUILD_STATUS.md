@@ -20,3 +20,7 @@ Checkpoint 10 Complete:
 Checkpoint 11 Complete:
 - Input snapshot module created
 - Mutation path eliminated
+
+Checkpoint 12 Complete:
+- Diagnostic cycle object introduced
+- Run-level isolation enforced
