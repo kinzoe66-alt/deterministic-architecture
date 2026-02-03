@@ -1,51 +1,100 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-build="obistar-scaffold">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>OBI★STAR — Deterministic Decision</title>
+  <title>OBI★STAR — Deterministic System</title>
+
+  <!-- Styles -->
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
-<body>
-  <header class="top">
+
+<body data-surface="root">
+
+  <!-- =========================
+       HEADER (Identity Surface)
+  ========================== -->
+  <header class="top" data-surface="identity">
     <div class="wrap">
       <h1 class="brand">OBI<span class="star">★</span>STAR</h1>
-      <p class="tagline">Deterministic decision analysis for high-stakes environments.<br/>No persuasion. No optimization. Structural truth only.</p>
+      <p class="tagline">
+        Deterministic diagnostic system.<br />
+        No persuasion. No optimization. Structural clarity only.
+      </p>
     </div>
   </header>
 
-  <main class="wrap">
-    <section class="card">
-      <h2 class="h">Decision Input</h2>
-      <textarea id="input" class="input" placeholder="Describe the decision you are facing. Be direct."></textarea>
-      <button id="runBtn" class="btn">Generate Deterministic Readout</button>
-      <p class="hint">Test mode: payment gate is OFF.</p>
+  <!-- =========================
+       MAIN WORKSPACE
+  ========================== -->
+  <main class="wrap" data-surface="workspace">
+
+    <!-- INPUT SURFACE -->
+    <section class="card" data-surface="input">
+      <h2 class="h">Input</h2>
+
+      <textarea
+        id="input"
+        class="input"
+        placeholder="Describe the system state or decision context."
+        data-role="raw-input"
+      ></textarea>
+
+      <button
+        id="runBtn"
+        class="btn"
+        data-action="run-diagnostic"
+      >
+        Run Diagnostic
+      </button>
+
+      <p class="hint">Internal build mode • No execution</p>
     </section>
 
-    <section class="card">
+    <!-- OUTPUT SURFACE -->
+    <section class="card" data-surface="output">
       <div class="row">
-        <h2 class="h">Readout</h2>
-        <div class="pill" id="modePill">TEST MODE</div>
+        <h2 class="h">System Readout</h2>
+        <div class="pill" id="modePill" data-role="mode-indicator">
+          INTERNAL
+        </div>
       </div>
-      <div id="out" class="out">(Awaiting input)</div>
+
+      <pre
+        id="out"
+        class="out"
+        data-role="diagnostic-output"
+      >(Awaiting input)</pre>
     </section>
 
-    <section class="card">
-      <h2 class="h">What this is / isn’t</h2>
+    <!-- CONTEXT / EXPLANATION SURFACE -->
+    <section class="card" data-surface="context">
+      <h2 class="h">About this surface</h2>
       <ul class="list">
-        <li><strong>Is:</strong> structure-first evaluation of constraints, conflicts, and implied consequences.</li>
-        <li><strong>Is not:</strong> prediction, persuasion, or comfort language.</li>
-        <li><strong>Output:</strong> three scopes (Tactical / Operational / Executive) so the user can see where the decision actually lives.</li>
+        <li><strong>Purpose:</strong> Expose system understanding, not advice.</li>
+        <li><strong>Method:</strong> Schema-first diagnostic evaluation.</li>
+        <li><strong>Output:</strong> Structural signals only.</li>
       </ul>
     </section>
+
   </main>
 
-  <footer class="foot">
+  <!-- =========================
+       FOOTER
+  ========================== -->
+  <footer class="foot" data-surface="footer">
     <div class="wrap">
-      <span>OBI★STAR — deterministic surface. No accounts. No tracking. One decision at a time.</span>
+      <span>
+        OBI★STAR — deterministic surface • no accounts • no tracking
+      </span>
     </div>
   </footer>
 
+  <!-- =========================
+       SCRIPT ENTRY
+       (No logic here yet)
+  ========================== -->
   <script src="assets/js/app.js" defer></script>
+
 </body>
 </html>
