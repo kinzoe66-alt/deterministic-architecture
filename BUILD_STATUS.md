@@ -12,3 +12,7 @@ Checkpoint 8 Complete:
 Checkpoint 9 Complete:
 - Runtime state formally declared
 - Read-only enforcement established
+
+Checkpoint 10 Complete:
+- Event wiring contract defined
+- Execution surface locked to explicit triggers
