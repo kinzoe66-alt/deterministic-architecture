@@ -1,0 +1,20 @@
+{
+  "version": "1.0",
+  "components": {
+    "input_surface": {
+      "role": "diagnostic_input",
+      "mount": "#input",
+      "authority": "human"
+    },
+    "run_action": {
+      "role": "diagnostic_trigger",
+      "mount": "#runBtn",
+      "authority": "system"
+    },
+    "output_surface": {
+      "role": "diagnostic_readout",
+      "mount": "#out",
+      "authority": "system"
+    }
+  }
+}
