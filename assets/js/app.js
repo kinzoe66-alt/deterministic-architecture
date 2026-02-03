@@ -1,3 +1,4 @@
+console.log("CHECKPOINT 22 :: output surface bound");
 import { mountExpression } from "./express/mount.js";
 import { bindSchema } from "../../sdom/bind.js";
 
