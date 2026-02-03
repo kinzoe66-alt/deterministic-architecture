@@ -1,3 +1,4 @@
+import { mountExpression } from "./express/mount.js";
 import { bindSchema } from "../../sdom/bind.js";
 
 fetch("./schema/schema.json")
@@ -8,3 +9,7 @@ fetch("./schema/schema.json")
   });
 
 console.log("OBISTAR :: app.js loaded");
+
+console.log("CHECKPOINT 21 :: expression mount ready");
+document.addEventListener("DOMContentLoaded", mountExpression);
+
