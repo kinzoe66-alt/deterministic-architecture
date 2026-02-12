@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>OB-STAR Internal Service</title>
+  <link rel="stylesheet" href="./internal_service.css" />
+</head>
+<body>
+  <div class="frame">
+    <header class="topbar">
+      <div class="brand">OB-STAR • Internal Service</div>
+      <div class="sub">Worldview Kernel + Formal Intake + System Diagnostic</div>
+    </header>
+
+    <main class="grid">
+      <!-- LEFT: WORLDVIEW / KERNEL -->
+      <section class="panel left">
+        <div class="panelHead">
+          <div class="panelTitle">WORLDVIEW MODEL (IMMUTABLE)</div>
+          <div class="panelMeta">
+            <button id="reloadKernel" class="btn secondary">Reload</button>
+          </div>
+        </div>
+
+        <div class="leftInner">
+          <aside class="toc">
+            <div class="tocTitle">Sections</div>
+            <div id="tocList" class="tocList"></div>
+          </aside>
+
+          <article class="doc">
+            <div class="docTitleRow">
+              <div class="docTitle">internal/kernel.md</div>
+              <div id="kernelStatus" class="pill">loading…</div>
+            </div>
+            <div id="kernelRender" class="docBody"></div>
+          </article>
+        </div>
+      </section>
+
+      <!-- RIGHT: INTAKE + DIAGNOSTIC -->
+      <section class="panel right">
+        <div class="panelHead">
+          <div class="panelTitle">INTAKE + DIAGNOSTIC</div>
+          <div class="panelMeta">
+            <button id="clearIntake" class="btn secondary">Clear</button>
+            <button id="diagnose" class="btn">Diagnose</button>
+          </div>
+        </div>
+
+        <div class="rightInner">
+          <!-- TOP: FORMAL INTAKE -->
+          <section class="box intake">
+            <div class="boxHead">
+              <div class="boxTitle">Formal Intake</div>
+              <div class="boxMeta">
+                <label class="fileBtn">
+                  Load file
+                  <input id="fileInput" type="file" accept=".txt,.md,.json,.yaml,.yml" />
+                </label>
+                <button id="generateDraft" class="btn secondary">Generate Ledger Draft</button>
+                <button id="downloadDraft" class="btn secondary" disabled>Download Draft</button>
+              </div>
+            </div>
+
+            <textarea id="intakeText" spellcheck="false" placeholder="Drop text here (terms, requirements, ledgers, constraints). The diagnostic will classify + tell you where it belongs in repo."></textarea>
+
+            <div class="intakeHints">
+              <div class="hint">
+                <span class="k">Goal:</span> Intake is where interpretation happens (security door).
+              </div>
+              <div class="hint">
+                <span class="k">Output:</span> Diagnostic returns suggested placement + required missing fields.
+              </div>
+            </div>
+          </section>
+
+          <!-- BOTTOM: SYSTEM DIAGNOSTIC -->
+          <section class="box diagnostic">
+            <div class="boxHead">
+              <div class="boxTitle">System Diagnostic Surface</div>
+              <div class="boxMeta">
+                <div id="diagPill" class="pill muted">idle</div>
+              </div>
+            </div>
+
+            <div id="diagOutput" class="diagBody">
+              <div class="muted">
+                Run Diagnose to see: recognized environment, entity cues, constraint class, FWF hints, and where to insert the ledger in the repo.
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footLeft">Execution boundary: document generation only.</div>
+      <div class="footRight">internal/ui/internal_service.html</div>
+    </footer>
+  </div>
+
+  <script src="./internal_service.js"></script>
+</body>
+</html>
